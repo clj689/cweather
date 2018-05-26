@@ -1,0 +1,9 @@
+<litepal>
+    <dbname value="cool_weather" />
+    <version value="1" />
+    <list>
+        <mapping class="lucas.com.cweather.db.Province" />
+        <mapping class="lucas.com.cweather.db.City" />
+        <mapping class="lucas.com.cweather.db.County" />
+    </list>
+</litepal>
