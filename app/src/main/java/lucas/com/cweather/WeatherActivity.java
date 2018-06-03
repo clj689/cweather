@@ -1,5 +1,6 @@
 package lucas.com.cweather;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -24,6 +25,7 @@ import java.io.IOException;
 
 import lucas.com.cweather.gson.Forecast;
 import lucas.com.cweather.gson.Weather;
+import lucas.com.cweather.service.AutoUpdateService;
 import lucas.com.cweather.util.HttpUtil;
 import lucas.com.cweather.util.Utility;
 import okhttp3.Call;
@@ -187,6 +189,8 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 
     /**
